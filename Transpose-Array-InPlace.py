@@ -1,4 +1,7 @@
-def method1(arr, n):
+def method1(arr: list[int], n: int):
+    # this was my original solve for the problem, in O(nlogn) complexity
+    # https://www.geeksforgeeks.org/problems/rearrange-an-array-with-o1-extra-space3142/1
+
     add_to = n
     for i in range(n):
         arr[arr[i] % n] += add_to
@@ -10,7 +13,10 @@ def method1(arr, n):
         arr[i] %= n
 
 
-def method2(arr, n):
+def method2(arr: list[int], n: int):
+    # Though this method is far more better in only O(n) complexity
+    # The modulo operator when giving conditions is really powerful and
+    # can simplify really hard rearrangement problems in place!
     for i in range(n):
         arr[i] += n * (arr[arr[i] % n] % n)
 
