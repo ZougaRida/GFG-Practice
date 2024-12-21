@@ -24,9 +24,10 @@ def method2(arr: list[int], n: int):
         arr[i] //= n
 
 
-array = [int(x) for x in input().split()]
-second_array = array.copy()
-method1(array, len(array))
-print(array)
-method2(second_array, len(second_array))
-print(second_array)
+if __name__ == "__main__":
+    array = [int(x) for x in input().split()]
+    second_array = array.copy()
+    method1(array, len(array))
+    print(array)
+    method2(second_array, len(second_array))
+    print(second_array)
