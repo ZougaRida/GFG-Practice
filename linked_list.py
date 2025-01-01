@@ -48,6 +48,20 @@ class LinkedList:
             self.length -= 1
             return popped_data
 
+    def __reversed__(self):
+        # Please note that reversed SHOULD NOT alter at all the linked list structure.
+        # thus the code used in reverse_linked_list.py is not ideal here and
+        # we have to use a temporary memory to achieve this and not ruin the linked list.
+
+        stack = []
+        current = self.head
+        while current:
+            stack.append(current.data)
+            current = current.next
+
+        while stack:
+            yield Node(stack.pop())
+
     def __len__(self):
         return self.length
 

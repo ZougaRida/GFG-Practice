@@ -11,6 +11,7 @@ def reverse_linked_list(head: Node) -> Node:
     # the better way was to implement a method withing the LinkedList class to reverse it
     # or better yet take advantage of reverse iterator to do so which will do later
     # TODO: implement reverse iterator in the nearest future
+    # The TODO is DONE and implemented.
     slow = None
     fast = head
     while fast is not None:
