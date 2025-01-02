@@ -48,6 +48,26 @@ class LinkedList:
             self.length -= 1
             return popped_data
 
+    def reverse_inline(self):
+        """
+        Implementing the reverse_linked_list.py method within the linked list.
+        """
+        slow = None
+        self.tail = fast = self.head
+        while fast is not None:
+            temporary = fast.next
+            fast.next = slow
+            slow = fast
+            fast = temporary
+
+        self.head = slow
+
+    def __iter__(self):
+        node = self.head
+        while node is not None:
+            yield Node(node.data)
+            node = node.next
+
     def __reversed__(self):
         # Please note that reversed SHOULD NOT alter at all the linked list structure.
         # thus the code used in reverse_linked_list.py is not ideal here and
