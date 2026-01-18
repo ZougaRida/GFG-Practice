@@ -1,5 +1,6 @@
 from linked_list import Node, LinkedList
 
+
 def reverse_linked_list(head: Node) -> Node:
     """
     This function reverses a linked list using slow and fast pointers technique.
@@ -20,7 +21,6 @@ def reverse_linked_list(head: Node) -> Node:
         slow = fast
         fast = temporary
     return slow
-
 
 
 if __name__ == "__main__":

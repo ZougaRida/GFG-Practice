@@ -25,7 +25,6 @@ class TestTransitionPoint(TestCase):
         array = [0] * 15 + [1] * 100
         self.assertEqual(transition_point(array), 15)
 
-
     def test_all_ones(self):
         array = [1, 1, 1, 1]
         self.assertEqual(transition_point(array), 0)
@@ -51,9 +50,3 @@ class TestTransitionPoint(TestCase):
 
         array = [0]
         self.assertEqual(transition_point(array), -1)
-
-
-
-
-
-

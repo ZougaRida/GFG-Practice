@@ -30,7 +30,7 @@ def stock_span_problem_better_solution(arr: list[int]) -> list[int]:
     use that and pop them out and keep track of their values in the new appended indeed, or keep them there and append
     the min value along with them to
     REMEMBER WELL THIS USEFUL TECHNIQUE!
-    
+
 
 
     """
@@ -39,7 +39,6 @@ def stock_span_problem_better_solution(arr: list[int]) -> list[int]:
     stack = []
 
     for i in range(n):
-
         while stack and arr[stack[-1]] <= arr[i]:
             stack.pop()
 

@@ -35,6 +35,6 @@ def maximum_profit(prices):
     return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     prices = [int(x) for x in input().split()]
     print(maximum_profit(prices))

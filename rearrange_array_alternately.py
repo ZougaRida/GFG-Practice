@@ -44,7 +44,6 @@ def rearrange(arr):
         arr[i] //= max_value
 
 
-
 array = [int(x) for x in input().split()]
 rearrange(array)
 print(array)

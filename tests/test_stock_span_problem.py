@@ -10,7 +10,9 @@ class TestStockSpanProblem(TestCase):
         self.assertEqual(stock_span_problem_better_solution(array), [1])
 
         array = [1]
-        self.assertEqual(stock_span_problem(array), stock_span_problem_better_solution(array))
+        self.assertEqual(
+            stock_span_problem(array), stock_span_problem_better_solution(array)
+        )
 
     def test_increasing_order(self):
         array = [10, 20, 30, 40, 50]
@@ -18,7 +20,9 @@ class TestStockSpanProblem(TestCase):
         self.assertEqual(stock_span_problem_better_solution(array), [1, 2, 3, 4, 5])
 
         array = [60, 80, 130, 150, 200, 400, 500, 501]
-        self.assertListEqual(stock_span_problem(array), stock_span_problem_better_solution(array))
+        self.assertListEqual(
+            stock_span_problem(array), stock_span_problem_better_solution(array)
+        )
 
     def test_decreasing_order(self):
         array = [50, 40, 30, 20, 10]
@@ -27,7 +31,9 @@ class TestStockSpanProblem(TestCase):
 
         array = [100, 96, 90, 89, 88, 71, 62]
         self.assertEqual(stock_span_problem(array), [1, 1, 1, 1, 1, 1, 1])
-        self.assertEqual(stock_span_problem_better_solution(array), [1, 1, 1, 1, 1, 1, 1])
+        self.assertEqual(
+            stock_span_problem_better_solution(array), [1, 1, 1, 1, 1, 1, 1]
+        )
 
     def test_random_array(self):
         array = [10, 4, 5, 90, 120, 80]
@@ -36,7 +42,9 @@ class TestStockSpanProblem(TestCase):
 
         array = [100, 80, 60, 70, 60, 75, 85]
         self.assertEqual(stock_span_problem(array), [1, 1, 1, 2, 1, 4, 6])
-        self.assertEqual(stock_span_problem_better_solution(array), [1, 1, 1, 2, 1, 4, 6])
+        self.assertEqual(
+            stock_span_problem_better_solution(array), [1, 1, 1, 2, 1, 4, 6]
+        )
 
         array = [10, 4, 4, 90, 120, 80]
         self.assertEqual(stock_span_problem(array), [1, 1, 2, 4, 5, 1])
