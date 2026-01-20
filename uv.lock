@@ -80,9 +80,13 @@ wheels = [
 name = "gfg-practice"
 version = "0.1.0"
 source = { virtual = "." }
-dependencies = [
+
+[package.dev-dependencies]
+dev = [
     { name = "coverage" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "coverage", specifier = ">=7.13.1" }]
+
+[package.metadata.requires-dev]
+dev = [{ name = "coverage", specifier = ">=7.13.1" }]
