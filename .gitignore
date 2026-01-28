@@ -4,5 +4,11 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# ignore what's related to coverage.py
 .coverage
 htmlcov/
+
+# ignore sphinx's build and autosummary in this case
+docs/build/
+docs/source/_autosummary/
