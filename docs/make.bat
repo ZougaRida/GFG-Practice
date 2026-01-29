@@ -28,7 +28,7 @@ if "%1"=="livehtml" goto livehtml
 if "%1"=="html" goto html
 
 :livehtml
-sphinx-autobuild --open-browser %SOURCEDIR% %BUILDDIR%
+sphinx-autobuild --open-browser --watch .. %SOURCEDIR% %BUILDDIR%
 goto end
 
 :html
