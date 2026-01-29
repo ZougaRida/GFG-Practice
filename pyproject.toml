@@ -14,3 +14,13 @@ dev = [
     "sphinx>=9.1.0",
     "sphinx-autobuild>=2025.8.25",
 ]
+
+[tool.ruff.lint]
+extend-select = ["W"]
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 88
+
+[toll.ruff.format]
+# Enable reformatting of code snippets in docstrings.
+docstring-code-format = true
