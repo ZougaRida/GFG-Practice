@@ -1,6 +1,17 @@
 def method1(arr: list[int], n: int):
-    # this was my original solve for the problem, in O(nlogn) complexity
-    # https://www.geeksforgeeks.org/problems/rearrange-an-array-with-o1-extra-space3142/1
+    """
+    Rearrange the array in place in `O(1)` memory.
+
+    The problem consists of an array of size n, containing all and only values from 0 to
+    n - 1, now we need to transform the array in place so that arr[i] = arr[arr[i]].
+    This was my initial shot at making that happen and it works. Time complexity
+    `O(nlog(n)`
+
+    https://www.geeksforgeeks.org/problems/rearrange-an-array-with-o1-extra-space3142/1
+
+    :param list(int) arr: the list of indices to transform in place
+    :param int n: the length of the list
+    """
 
     add_to = n
     for i in range(n):
@@ -14,9 +25,18 @@ def method1(arr: list[int], n: int):
 
 
 def method2(arr: list[int], n: int):
-    # Though this method is far more better in only O(n) complexity
-    # The modulo operator when giving conditions is really powerful and
-    # can simplify really hard rearrangement problems in place!
+    """
+    2nd method that uses the wonderful technique of modulo encoding.
+
+    https://www.geeksforgeeks.org/problems/rearrange-an-array-with-o1-extra-space3142/1
+
+    .. note:: now that I think about it, if we keep applying this to the original
+              array, eventually we will reach the identity array, in other words,
+              arr[i] = i for all i.
+
+    :param list(int) arr: the list of indices to transform in place
+    :param int n: the length of the list
+    """
     for i in range(n):
         arr[i] += n * (arr[arr[i] % n] % n)
 
